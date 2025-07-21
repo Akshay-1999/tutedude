@@ -1,13 +1,13 @@
-class file_operation:
-    def write_file(self,write_text):
-        with open("sample.txt",'w') as file:
-            file_write = file.write(write_text)
-            file.close
+def list_split(list):
+    split_list = list[0:5]
+    return(split_list)
+def reverse_list(list_split):
+    list_split.reverse()
+    return(list_split)
 
-if __name__ == "__main__":
-    obj = file_operation()
-    write_text = input("enter text : ")
-    try:
-        obj.write_file(write_text)
-    except Exception as e:
-        print(f"there is an exception : ",{e})
+if __name__ =="__main__":
+    list = [i**1 for i in range(1,11)]
+    a = reverse_list(list_split(list))
+    b = list_split(list)
+    print(b)
+    print(a)
